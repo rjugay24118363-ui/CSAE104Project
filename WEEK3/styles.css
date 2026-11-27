@@ -1,0 +1,155 @@
+
+:root {
+  --brand: #1d4e89;
+  --brand-soft: #e0ecf8;
+  --surface: #ffffff;
+  --page: #f4f7fa;
+  --text: #1f2933;
+  --border: #d9e2ec;
+}
+
+/* General styling */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: var(--page);
+  color: var(--text);
+}
+
+/* Header and navigation */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  background: var(--brand);
+  color: white;
+  padding: 16px 24px;
+  background-color: #05351d;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+main {
+  max-width: 1100px;
+  width: 100%;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* Notice grid */
+.notices {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+.notice {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 0;
+}
+
+.notice h2 {
+  color: var(--brand);
+  margin-top: 0;
+}
+
+.notice p {
+  line-height: 1.6;
+}
+
+/* Aside */
+aside {
+  background: var(--brand-soft);
+  padding: 20px;
+  margin: 0 16px;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 16px;
+}
+
+/* Tablet layout */
+@media (min-width: 600px) {
+  .notices {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop layout */
+@media (min-width: 960px) {
+  body {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+  }
+
+  header {
+    grid-area: header;
+    padding: 24px 32px;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  aside {
+    grid-area: aside;
+    margin: 24px 16px;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  .notices {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+ footer {
+            margin-top: 40px;
+            padding: 20px;
+            color: #777;
+            background: #05351d;
+            color: white;
+            padding: 50px 20px;
+        }

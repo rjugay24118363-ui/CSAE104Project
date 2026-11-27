@@ -1,0 +1,21 @@
+LAB 4 – HTTP TRACE
+
+1. First Request for https://example.com
+
+Request URL: https://example.com/
+
+Request Method: GET
+
+Status Code: 200 OK
+
+Content-Type: text/html
+
+2. Request for https://jsonplaceholder.typicode.com/posts/9999
+
+Status Code: 404 Not Found
+
+Meaning: The status code 404 means that the requested resource or page cannot be found on the server.
+
+3. Why Does a Browser Make Several Requests to Show One Page?
+
+A browser makes several HTTP requests because a webpage contains different resources such as HTML, CSS, JavaScript, images, fonts, and other files. Each resource may need to be requested separately from the server before the webpage can be displayed completely.

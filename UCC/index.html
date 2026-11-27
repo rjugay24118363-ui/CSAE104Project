@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Union Christian College</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+<div id="splash-screen">
+    <h1>UCC<span>.</span></h1>
+    <p>UNION CHRISTIAN COLLEGE</p>
+    <small>Excellence • Faith • Service</small>
+
+    <div class="loader"></div>
+</div>
+
+
+
+    <!-- AUTHENTICATION -->
+    <section id="auth-section">
+
+        <div class="auth-container">
+
+            <div class="auth-brand">
+                <div class="auth-logo">UCC</div>
+                <h1>Union Christian College</h1>
+                <p>Learn with Purpose. Lead with Faith.</p>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <div id="login-form" class="auth-form">
+                <h2>Welcome Back!</h2>
+                <p class="form-description">Log in to continue your journey.</p>
+
+                <form id="login">
+                    <label>Email Address</label>
+                    <input type="email" id="login-email"
+                           placeholder="Enter your email" required>
+
+                    <label>Password</label>
+                    <input type="password" id="login-password"
+                           placeholder="Enter your password" required>
+
+                    <button type="submit" class="auth-button">
+                        Log In
+                    </button>
+                </form>
+
+                <p class="switch-form">
+                    Don't have an account?
+                    <a href="#" id="show-signup">Sign Up</a>
+                </p>
+
+                <button class="guest-button" id="guest-login">
+                    Continue as Guest
+                </button>
+            </div>
+
+            <!-- SIGN UP FORM -->
+            <div id="signup-form" class="auth-form hidden">
+                <h2>Create Account</h2>
+                <p class="form-description">Become part of the UCC community.</p>
+
+                <form id="signup">
+                    <label>Full Name</label>
+                    <input type="text" id="signup-name"
+                           placeholder="Enter your full name" required>
+
+                    <label>Email Address</label>
+                    <input type="email" id="signup-email"
+                           placeholder="Enter your email" required>
+
+                    <label>Password</label>
+                    <input type="password" id="signup-password"
+                           placeholder="Create a password" minlength="6" required>
+
+                    <label>Confirm Password</label>
+                    <input type="password" id="confirm-password"
+                           placeholder="Confirm your password" required>
+
+                    <button type="submit" class="auth-button">
+                        Create Account
+                    </button>
+                </form>
+
+                <p class="switch-form">
+                    Already have an account?
+                    <a href="#" id="show-login">Log In</a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MAIN WEBSITE -->
+    <div id="main-website" class="hidden">
+
+        <header>
+            <nav>
+                <h2 class="logo">UCC<span>.</span></h2>
+
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#values">Values</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <button id="logout-button">Log Out</button>
+            </nav>
+        </header>
+
+        <!-- HOME -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="small-title">UNION CHRISTIAN COLLEGE</p>
+
+                <h1>
+                    Learn with Purpose.<br>
+                    Lead with <span>Faith.</span>
+                </h1>
+
+                <p>
+                    Inspiring young minds, building strong character,
+                    and creating a brighter future through education.
+                </p>
+
+                <a href="#about" class="button">Discover UCC</a>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+            <div class="about-text">
+                <p class="small-title">WHO WE ARE</p>
+
+                <h2>Education with a Purpose.</h2>
+
+                <p>
+                    Union Christian College is a community dedicated
+                    to learning, personal growth, and Christian values.
+                    We believe that every student has the potential
+                    to achieve greatness and make a difference in society.
+                </p>
+            </div>
+
+            <div class="about-box">
+                <h2>UCC</h2>
+                <p>Excellence in Education</p>
+                <span>Faith • Knowledge • Service</span>
+            </div>
+        </section>
+
+        <!-- VALUES -->
+        <section class="values" id="values">
+            <p class="small-title">WHAT MAKES US DIFFERENT</p>
+
+            <h2>Growing Together, Achieving Together.</h2>
+
+            <div class="value-container">
+
+                <div class="value-card">
+                    <h3>01</h3>
+                    <h4>Excellence</h4>
+                    <p>
+                        Striving for quality education and
+                        continuous improvement.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <h3>02</h3>
+                    <h4>Faith</h4>
+                    <p>
+                        Building character through Christian
+                        values and principles.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <h3>03</h3>
+                    <h4>Service</h4>
+                    <p>
+                        Encouraging students to contribute
+                        positively to society.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact" id="contact">
+            <p class="small-title">BE PART OF OUR COMMUNITY</p>
+
+            <h2>Your Future Begins Here.</h2>
+
+            <p>
+                Discover opportunities and start your journey with UCC.
+            </p>
+
+            <a href="mailto:info@example.com" class="button">
+                Contact Us
+            </a>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <h3>UNION CHRISTIAN COLLEGE</h3>
+            <p>Excellence • Faith • Service</p>
+
+            <p class="copyright">
+                © 2026 Union Christian College. All Rights Reserved.
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
