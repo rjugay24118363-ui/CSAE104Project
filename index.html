@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,26 +13,92 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --background: linear-gradient(135deg, #dbeafe, #fce7f3);
+            --card-bg: #ffffff;
+            --text: #263354;
+            --secondary: #69758c;
+            --accent: #536dca;
+            --header-bg: linear-gradient(120deg, #667eea, #a78bfa, #f4a7c5);
+            --shadow: rgba(60, 70, 120, 0.12);
+        }
+
+        body.light-mode {
+            --background: linear-gradient(135deg, #dbeafe, #fce7f3);
+            --card-bg: #ffffff;
+            --text: #263354;
+            --secondary: #69758c;
+            --accent: #536dca;
+            --header-bg: linear-gradient(120deg, #667eea, #a78bfa, #f4a7c5);
+            --shadow: rgba(60, 70, 120, 0.12);
+        }
+
+        body.dark-mode {
+            --background: linear-gradient(135deg, #202b50, #382e62, #563d65);
+            --card-bg: #292e4b;
+            --text: #ffffff;
+            --secondary: #c2c7dc;
+            --accent: #c3b5f5;
+            --header-bg: linear-gradient(120deg, #354b91, #694b9c, #985d91);
+            --shadow: rgba(0, 0, 0, 0.2);
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background: #f4f6fb;
-            color: #333;
+            background: var(--background);
+            background-attachment: fixed;
+            color: var(--text);
             text-align: center;
+            min-height: 100vh;
+            transition: 0.3s;
         }
 
         header {
-            background: #253b80;
+            background: var(--header-bg);
+            padding: 65px 20px;
             color: white;
-            padding: 50px 20px;
         }
 
         header h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
+            font-size: 36px;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            color: white;
+            letter-spacing: 2px;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid white;
+            padding: 10px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.35);
         }
 
         main {
-            padding: 50px 20px;
+            padding: 55px 20px;
+        }
+
+        main > h2 {
+            font-size: 27px;
+            color: var(--accent);
+        }
+
+        .subtitle {
+            color: var(--secondary);
+            margin-top: 12px;
         }
 
         .activities {
@@ -39,84 +106,128 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 25px;
-            margin-top: 30px;
+            margin: 40px auto;
+            max-width: 1100px;
         }
 
         .card {
-            background: white;
-            padding: 30px;
+            background: var(--card-bg);
+            padding: 35px 25px;
             width: 280px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
         }
 
         .card h2 {
+            color: var(--accent);
             margin-bottom: 15px;
-            color: #253b80;
+            font-size: 24px;
         }
 
         .card p {
-            margin-bottom: 20px;
+            color: var(--secondary);
+            margin-bottom: 25px;
+            line-height: 1.5;
         }
 
         .card a {
             display: inline-block;
-            background: #253b80;
+            background: linear-gradient(120deg, #667eea, #a78bfa);
             color: white;
-            padding: 12px 25px;
+            padding: 11px 28px;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
         .card a:hover {
-            background: #405bb0;
+            opacity: 0.85;
         }
 
         footer {
             margin-top: 40px;
-            padding: 20px;
-            color: #777;
-            background: #253b80;
+            padding: 25px;
+            background: var(--header-bg);
             color: white;
-            padding: 50px 20px;
+        }
+
+        footer span {
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 80px 15px 40px;
+            }
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            .theme-toggle {
+                top: 15px;
+                right: 15px;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 320px;
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <button class="theme-toggle" id="themeToggle">
+        Dark Mode
+    </button>
+
     <header>
         <h1>WEB PROGRAMMING</h1>
+        <p>MY LEARNING JOURNEY</p>
     </header>
 
     <main>
         <h2>My Weekly Activities</h2>
+        <p class="subtitle">Explore my activities and projects each week.</p>
 
         <div class="activities">
 
             <div class="card">
-                <h2>Week 1</h2>
-                <a href="WEEK1/index.html">View</a>
+                <h2>WEEK 1</h2>
+                <p>My first web programming activity.</p>
+                <a href="WEEK1/index.html">View Activity</a>
             </div>
 
             <div class="card">
-                <h2>Week 2</h2>
-                <a href="WEEK2/index.html">View</a>
+                <h2>WEEK 2</h2>
+                <p>My second web programming activity.</p>
+                <a href="WEEK2/index.html">View Activity</a>
             </div>
 
             <div class="card">
-                <h2>Week 3</h2>
-                <a href="WEEK3/index.html">View</a>
+                <h2>WEEK 3</h2>
+                <p>My third web programming activity.</p>
+                <a href="WEEK3/index.html">View Activity</a>
             </div>
 
             <div class="card">
-                <h2>Week 4</h2>
-                <a href="WEEK3/index.html">View</a>
+                <h2>WEEK 4</h2>
+                <p>My fourth web programming activity.</p>
+                <a href="WEEK4/index.html">View Activity</a>
             </div>
 
             <div class="card">
-                <h2>Week 5</h2>
-                <a href="WEEK3/index.html">View</a>
+                <h2>WEEK 5</h2>
+                <p>My fifth web programming activity.</p>
+                <a href="WEEK5/index.html">View Activity</a>
             </div>
 
         </div>
@@ -124,7 +235,35 @@
 
     <footer>
         <p>My Activities Website &copy; 2026</p>
+        <p>Designed with <span>GRADIENT COLORS</span></p>
     </footer>
+
+    <script>
+        const themeToggle = document.getElementById("themeToggle");
+
+        // Load saved theme
+        let savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "dark") {
+            document.body.classList.add("dark-mode");
+            themeToggle.textContent = "Light Mode";
+        }
+
+        // Switch between light and dark mode
+        themeToggle.addEventListener("click", function() {
+
+            document.body.classList.toggle("dark-mode");
+
+            if (document.body.classList.contains("dark-mode")) {
+                themeToggle.textContent = "Light Mode";
+                localStorage.setItem("theme", "dark");
+            } else {
+                themeToggle.textContent = "Dark Mode";
+                localStorage.setItem("theme", "light");
+            }
+
+        });
+    </script>
 
 </body>
 </html>

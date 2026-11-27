@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Notices</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Campus Notices</h1>
+        <p>Stay updated with the latest campus announcements.</p>
+    </header>
+
+    <main>
+
+        <section class="search-section">
+            <h2>Find Announcements</h2>
+            <p>Search for campus news and updates.</p>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search notices..."
+            >
+        </section>
+
+        <section class="notices-section">
+            <h2>Latest Announcements</h2>
+
+            <ul id="list"></ul>
+
+            <p id="empty-message" hidden>
+                No notices found. Try another keyword.
+            </p>
+        </section>
+
+        <section class="exercise-section">
+            <h2>JavaScript Practice Results</h2>
+
+            <div class="result-card">
+                <h3>Arrow Functions</h3>
+                <p id="arrow-output"></p>
+            </div>
+
+            <div class="result-card">
+                <h3>Array Methods</h3>
+                <p id="names-output"></p>
+                <p id="cheap-output"></p>
+                <p id="total-output"></p>
+            </div>
+
+            <div class="result-card">
+                <h3>Destructuring and Spread</h3>
+                <p id="notice-output"></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Campus Notices &copy; 2026 | Web Programming</p>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+
+</body>
+</html>

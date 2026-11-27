@@ -1,0 +1,155 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #e9d5ff, #fce7f3);
+    color: #252344;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+header {
+    background: transparent;
+    color: #252344;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #5d5878;
+}
+
+main {
+    max-width: 950px;
+    margin: 20px auto 40px;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+section h2 {
+    color: #51447d;
+    margin-bottom: 18px;
+}
+
+.search-section,
+.exercise-section {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid #e5dafa;
+    box-shadow: 0 4px 15px rgba(80, 65, 120, 0.08);
+}
+
+.search-section input {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid #d8c9ef;
+    border-radius: 9px;
+    font-size: 15px;
+    outline: none;
+    background: white;
+    color: #252344;
+}
+
+.search-section input:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.15);
+}
+
+#list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.notice {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e5dafa;
+    border-left: 5px solid #a78bfa;
+    box-shadow: 0 4px 12px rgba(80, 65, 120, 0.08);
+    transition: 0.2s ease;
+}
+
+.notice:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 16px rgba(80, 65, 120, 0.12);
+}
+
+.notice h3 {
+    color: #51447d;
+    margin-bottom: 10px;
+}
+
+.notice p {
+    color: #625d75;
+}
+
+.notice small {
+    display: block;
+    margin-top: 15px;
+    color: #9690a8;
+}
+
+.result-card {
+    background: #f8f5ff;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 9px;
+    border-left: 4px solid #c084fc;
+}
+
+.result-card h3 {
+    color: #51447d;
+    margin-bottom: 10px;
+}
+
+.result-card p {
+    overflow-wrap: anywhere;
+}
+
+#empty-message {
+    color: #77718b;
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.65);
+    color: #51447d;
+    text-align: center;
+    padding: 22px;
+    margin-top: 40px;
+    border-top: 1px solid #e5dafa;
+}
+
+@media (max-width: 650px) {
+    #list {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 29px;
+    }
+}
+```
